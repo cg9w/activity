@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Viewer</title>
+    <style>
+        /* Make the image responsive */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Prevent right-click context menu */
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Disable right-click on the image */
+        img {
+            pointer-events: none;
+        }
+
+        /* Disable right-click on the body */
+        body {
+            -webkit-user-select: none; /* Prevent text selection */
+            -moz-user-select: none; 
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+    <img src="astro-activities.jpg" alt="Image" />
+</body>
+</html>
